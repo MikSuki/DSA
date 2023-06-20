@@ -2,5 +2,8 @@
   "type": "module",
   "compilerOptions": {
     "baseUrl": "."
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
   }
 }
