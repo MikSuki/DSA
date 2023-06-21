@@ -1,6 +1,32 @@
 // 五個為一組
 const division: number = 5
 
+/**
+ * selection problem: 給定一個為排序的數列和一整數k，要找到第k小的數
+ * 
+ * prune-and-search method
+ * 
+ * step.1 分成五個五個一組
+ * step.2 用每組的中位數再遞迴找中位數p
+ * step.3 去用最後找到的中位數p 將input切成3組 S1, S2, S3
+ *      分別是 <p, =p 和 >p
+ *      case.1 |S1| > k
+ *          第k小的元素在S1裡面，繼續findKth(S1, k)
+ *      case.2 |S1|+|S2| >= k
+ *          第k小的元素剛好就是p
+ *      case.3 |S1|+|S2| < k
+ *          第k小的元素比p還大，繼續findKth(S3, k-|S1|+|S2|)
+ *         
+ *      可以保證每次至少丟掉n/4
+ *          
+ * 
+ * 時間: O(n)
+ *      T(n) = T(3n/4) + T(n/5) + O(n)
+ * 
+ * @param input unsorted sequence
+ * @param k k-th index
+ * @returns 第k小的元素之index
+ */
 export function findKth(input: number[], k: number): number {
     if (k > input.length) throw ('out of range')
 
