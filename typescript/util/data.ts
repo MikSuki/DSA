@@ -30,3 +30,18 @@ export function sorted_repeat(alphabet_size: number, size: number): number[] {
     arr.sort((a, b) => a - b)
     return arr
 }
+
+/**
+ * generate repeated non-sorted data
+ * @param alphabet_size maximum of data
+ * @param size size of data
+ * @returns 
+ */
+export function nonSorted_nonRepeat(alphabet_size: number, size: number): number[] {
+    const arr: number[] = []
+
+    for (let i = 0; i < size; ++i)
+        arr.push(~~(Math.random() * alphabet_size))
+    return arr
+}
+
