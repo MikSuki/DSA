@@ -32,7 +32,7 @@ export function sorted_repeat(alphabet_size: number, size: number): number[] {
 }
 
 /**
- * generate repeated non-sorted data
+ * generate non-repeated non-sorted data
  * @param alphabet_size maximum of data
  * @param size size of data
  * @returns 
