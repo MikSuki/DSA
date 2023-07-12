@@ -21,7 +21,6 @@ export function nonRepeat(start: number, gap: number, size: number, sort: boolea
  * generate non-sorted repeated data
  * @param alphabet_size maximum of data
  * @param size size of data
- * @param sort need sort
  * @returns 
  */
 export function data_NonSorted_Repeated(alphabet_size: number, size: number): number[] {
@@ -36,7 +35,6 @@ export function data_NonSorted_Repeated(alphabet_size: number, size: number): nu
  * generate sorted repeated data
  * @param alphabet_size maximum of data
  * @param size size of data
- * @param sort need sort
  * @returns 
  */
 export function data_Sorted_Repeated(alphabet_size: number, size: number): number[] {
